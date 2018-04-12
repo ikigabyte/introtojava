@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+    
+    <head>
+    <meta charset="UTF-8">
+    
+   
+    
+    <link rel="stylesheet" href="style.css">
+     <link href="https://fonts.googleapis.com/css?family=Hi+Melody" rel="stylesheet"> 
+        
+    <title> Java Script Assigment </title>
+
+    </head>
+    
+    
+    
+    <body>
+    
+    
+    <h1> A Quiet Place </h1>
+    <button onclick="myFunction()" id="button">Click to reveal Monster</button>
+        
+        
+        <div id="myDIV">
+        <img src="assets/godzilla.png" id="monster" alt="monsterimage">
+            
+        </div>
+        
+        
+    <audio id="myAudio">
+        
+        <source src="assets/bite.mp3" type="audio/mpeg">
+        
+        </audio>
+        
+<!--       Java script -->
+        
+<!--      Control Structures, Output,  Well Formatted Code, JavaScript Variables, Advanced Concepts   -->
+        
+    <script>
+        
+        
+        
+    var button = document.getElementById("button");
+    var audio = document.getElementById("myAudio");
+    
+    
+    var image = document.getElementById("monster")
+    var x = document.getElementById("myDIV");
+        x.style.display = "none";
+    
+        
+        
+  function myFunction() {
+  
+      
+      
+    if (x.style.display === "none") {
+        x.style.display = "block";
+        button.innerHTML = "Click to Hide";
+        audio.play()
+        move()
+       
+    } else {
+        x.style.display = "none";
+        button.innerHTML = "Click to Reveal";
+        audio.pause()
+        
+    }
+} 
+
+    function move(){
+    var pos = 0;
+    var id = setInterval(frame,3)
+    function frame(){
+           
+            if (pos == 300) {
+                clearInterval(id)
+               
+                
+            } else{
+                pos++;
+                image.style.left = pos + 'px'
+                
+            }
+        }
+    }
+        
+        
+        
+    
+        
+    </script>
+<!---->
+        
+    </body>
+</html>

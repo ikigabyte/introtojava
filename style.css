@@ -1,0 +1,70 @@
+/*Style Sheet*/
+
+html{
+    
+    background-color: black;
+    color: white;
+    
+}
+
+
+body{
+    
+    text-align: center;
+    padding-top: 280px;
+   
+}
+
+
+/*First Page*/
+
+h1{
+    font-family: 'Hi Melody', cursive;
+    color: orangered;
+    font-size: 42px;
+}
+
+
+
+button{
+    margin-top: -100px;
+    
+ font-family: 'Hi Melody', cursive;
+    color: white;
+    background-color: transparent;
+    font-size: 22px;
+    border-style: none;
+    animation: blinker 2s linear infinite
+}
+
+
+#myDIV{
+    height: 200px;
+    width: 100%;
+    margin-top: 20px;
+    
+    
+}
+
+
+#myDIV img{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    
+}
+
+
+/*Animations*/
+
+@keyframes blinker{
+    
+    
+    
+    50%{
+        opacity: 0;
+    }
+}
+
+
+/* End Frames */
