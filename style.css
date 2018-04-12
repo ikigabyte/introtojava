@@ -1,70 +1,108 @@
-/*Style Sheet*/
+/*Style sheet*/
+
 
 html{
-    
-    background-color: black;
-    color: white;
-    
+   
+    font-family: 'Do Hyeon', sans-serif;
 }
 
 
 body{
     
-    text-align: center;
-    padding-top: 280px;
-   
-}
-
-
-/*First Page*/
-
-h1{
-    font-family: 'Hi Melody', cursive;
-    color: orangered;
-    font-size: 42px;
-}
-
-
-
-button{
-    margin-top: -100px;
-    
- font-family: 'Hi Melody', cursive;
+    background-color: black;
     color: white;
+    text-align: center;
+    
+}
+
+
+#weight{
+    color: grey;
+    font-size: 16px;
+    font-family: 'Do Hyeon', sans-serif;
     background-color: transparent;
-    font-size: 22px;
+    text-align: center;
+       border-color: transparent;
+    border-bottom-color: white;
+    width: 12%;
+
+}
+
+
+
+#waist{
+    color: grey;
+    font-size: 16px;
+    font-family: 'Do Hyeon', sans-serif;
+    background-color: transparent;
+    text-align: center;
+       border-color: transparent;
+    border-bottom-color: white;
+    width: 12%;
+
+}
+
+
+#button{
+   
+    background-color: darkred;
+    color: white;
     border-style: none;
-    animation: blinker 2s linear infinite
+    font-family: 'Do Hyeon', sans-serif;
+    font-size: 22px;
+    margin-top: 40px;
+    
+    padding: 10px 10px;
+     transition-duration: 0.3s;
 }
 
 
-#myDIV{
-    height: 200px;
-    width: 100%;
-    margin-top: 20px;
+#button:hover{
+    background-color: white;
+    color: darkred;
     
-    
-}
-
-
-#myDIV img{
-    width: 100px;
-    height: 100px;
-    position: absolute;
+    transition-duration: 0.6s;
     
 }
 
 
-/*Animations*/
+input{
+   margin: 10px 10px;
 
-@keyframes blinker{
-    
-    
-    
-    50%{
-        opacity: 0;
-    }
 }
 
+#line{
+    background-color: grey;
+    
+    margin: auto;
 
-/* End Frames */
+    
+    width: 50%;
+    margin-top: 30px;
+    
+    
+    
+    height: 2px;
+}
+
+#bfbox{
+    color: white;
+    font-size: 60px;
+    background-color: transparent;
+    border-style: none;
+    text-align: center;
+    font-family: 'Do Hyeon', sans-serif;
+    
+    
+}
+#comment{
+   color: darkgrey;
+    font-size: 22px;
+    background-color: transparent;
+    border-style: none;
+    text-align: center;
+    font-family: 'Do Hyeon', sans-serif;
+    
+}
+
+/*End*/

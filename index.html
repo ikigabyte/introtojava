@@ -1,5 +1,3 @@
-<!DOCTYPE HTML>
-
 <html lang="en">
     
     <head>
@@ -8,92 +6,68 @@
    
     
     <link rel="stylesheet" href="style.css">
-     <link href="https://fonts.googleapis.com/css?family=Hi+Melody" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Hi+Melody" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Do+Hyeon" rel="stylesheet"> 
         
     <title> Java Script Assigment </title>
 
     </head>
     
     
+     <script>
+        
+        var BFBox = document.getElementById("bfbox")
+        var comment = document.getElementById("comment")        
+        
+      function myFunction(){
+          
+        console.log("Calculating Body Fat Percentage...")
+        
+        var weight = parseInt(document.getElementById("weight").value, 10);
+        var waist = parseInt(document.getElementById("waist").value, 10);
+        var Factor1 = weight * 1.082 + 94.42;   
+        var Factor2 = waist * 4.15;
+        var LBMass = Factor1 - Factor2;
+        var BFWeight = weight - LBMass;
+        var BFPercent = (BFWeight * 100/ weight).toFixed(2);  
+          document.getElementById("bfbox").value = BFPercent;
+         
+          if (BFPercent< 20) {
+           document.getElementById("comment").value ="Dayum! You're looking good";
+         
+          }else{
+           
+            document.getElementById("comment").value ="Yikes! It's time to hit the gym";
+
+          }
+    }
     
+    </script>
+      
     <body>
-    
-    
-    <h1> A Quiet Place </h1>
-    <button onclick="myFunction()" id="button">Click to reveal Monster</button>
         
         
-        <div id="myDIV">
-        <img src="assets/godzilla.png" id="monster" alt="monsterimage">
-            
+    <div id ="calc">
+        
+    <h1> Body Fat Calculator</h1>
+    <input type="text" id="weight"  placeholder ="Enter your weight here"> Lbs
+        <br>
+    <input type="text" id="waist" placeholder = "Enter your waist number here"> Inches
+        <br>
+    <input type ="button" id="button" value="Calculate Body Fat %" onclick="myFunction();">
+    
+        
         </div>
         
-        
-    <audio id="myAudio">
-        
-        <source src="assets/bite.mp3" type="audio/mpeg">
-        
-        </audio>
-        
-<!--       Java script -->
-        
-<!--      Control Structures, Output,  Well Formatted Code, JavaScript Variables, Advanced Concepts   -->
-        
-    <script>
-        
-        
-        
-    var button = document.getElementById("button");
-    var audio = document.getElementById("myAudio");
-    
-    
-    var image = document.getElementById("monster")
-    var x = document.getElementById("myDIV");
-        x.style.display = "none";
-    
-        
-        
-  function myFunction() {
-  
-      
-      
-    if (x.style.display === "none") {
-        x.style.display = "block";
-        button.innerHTML = "Click to Hide";
-        audio.play()
-        move()
-       
-    } else {
-        x.style.display = "none";
-        button.innerHTML = "Click to Reveal";
-        audio.pause()
-        
-    }
-} 
+        <div id="line"></div>
 
-    function move(){
-    var pos = 0;
-    var id = setInterval(frame,3)
-    function frame(){
-           
-            if (pos == 300) {
-                clearInterval(id)
-               
-                
-            } else{
-                pos++;
-                image.style.left = pos + 'px'
-                
-            }
-        }
-    }
-        
-        
-        
-    
-        
-    </script>
-<!---->
+
+        <input type="text" id="bfbox" value="" disabled>
+        <br>
+        <input type="text" id="comment" value ="" disabled>
+
         
     </body>
 </html>
+
+
